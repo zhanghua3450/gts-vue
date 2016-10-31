@@ -1,0 +1,14 @@
+{
+	"menuList":[
+		{"name":"我的视图","url":"home"},
+		{"name":"项目","url":"stproject"}
+	],
+	"quickMenu":[
+		{"name":"所以任务","url":""},	
+		{"name":"我创建的需求","url":""},
+		{"name":"我审核的需求","url":""},
+		{"name":"团队任务明细","url":""},
+		{"name":"申请加班","url":""},
+		{"name":"点餐","url":""}
+	]
+}
