@@ -1,7 +1,20 @@
 {
 	"menuList":[
-		{"name":"我的视图","url":"home"},
-		{"name":"项目","url":"stproject"}
+	
+		{"name":"项目","url":"project",
+			"items":[
+				{"name":"项目配置","url":"project"},
+				{"name":"需求","url":"story"},
+				{"name":"任务","url":"task"}
+			]
+		},
+		{"name":"数据统计","url":"overtime",
+			"items":[
+				{"name":"加班统计","url":"overtime"},
+				{"name":"工作任务统计","url":"new_task"}
+			]
+
+		}
 	],
 	"quickMenu":[
 		{"name":"所以任务","url":""},	
