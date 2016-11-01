@@ -18,20 +18,20 @@
                     </el-menu>
                     <div class="nav-icon">
                      
-                        <el-dropdown menu-align="start" >
+                        <el-dropdown menu-align="start" class="page-header-elDropdown">
                             <span class="el-dropdown-link" >
                                 <i class="el-icon-more"></i>
                             </span>
-                            <el-dropdown-menu slot="dropdown" >
+                            <el-dropdown-menu slot="dropdown" class="page-header-el-dropdown__menu">
                                 <el-dropdown-item  v-for="item in quickMenu"><router-link :to="item.url"  class="link-item">{{item.name}}</router-link></el-dropdown-item>
                             </el-dropdown-menu>
                         </el-dropdown>
 
-                        <el-dropdown menu-align="start"  >
+                        <el-dropdown menu-align="start"  class="page-header-elDropdown">
                             <span class="el-dropdown-link">
                                 <i class="el-icon-edit"></i>
                             </span>
-                            <el-dropdown-menu slot="dropdown" >
+                            <el-dropdown-menu slot="dropdown" class="page-header-el-dropdown__menu">
                                 <el-dropdown-item><router-link to="edite" class="link-item">修改密码</router-link></el-dropdown-item>
                                 <el-dropdown-item><router-link to="close" class="link-item">退出账号</router-link></el-dropdown-item>
                             
@@ -39,59 +39,15 @@
                         </el-dropdown>
                     </div>
                 </div>
-
-                <!-- <div class="header">
-                    <div class="logo">
-                        <img src="../assets/img/logo.png">
-                    </div>
-                <nav>
-                <ul>
-                    <li v-for="item in menulist">
-                        <router-link :to="item.url" >{{item.name}}</router-link>
-                    </li>
-                                           
-                </ul>
-
-                </nav>
-                <div class="nav-icon">
-                 
-                    <el-dropdown menu-align="start" >
-                        <span class="el-dropdown-link" >
-                            <i class="el-icon-more"></i>
-                        </span>
-                        <el-dropdown-menu slot="dropdown" >
-                            <el-dropdown-item  v-for="item in quickMenu"><router-link :to="item.url"  class="link-item">{{item.name}}</router-link></el-dropdown-item>
-                        </el-dropdown-menu>
-                    </el-dropdown>
-
-                    <el-dropdown menu-align="start"  >
-                        <span class="el-dropdown-link">
-                            <i class="el-icon-edit"></i>
-                        </span>
-                        <el-dropdown-menu slot="dropdown" >
-                            <el-dropdown-item><router-link to="edite" class="link-item">修改密码</router-link></el-dropdown-item>
-                            <el-dropdown-item><router-link to="close" class="link-item">退出账号</router-link></el-dropdown-item>
-                        
-                        </el-dropdown-menu>
-                    </el-dropdown>
-                </div> -->
             </el-col>
         </el-row>
-
-
-        <el-row>
-            <el-col :span="24">
-             dsfsadf
-            </el-col>
-        </el-row>
-
    </div>
 </template>
 
 <style lang="less">
     @head-height: 50px;
     @common-color: #198789;
-    .page-header{ background-color:@common-color; height: @head-height;
+    .page-header{ background-color:@common-color; height: @head-height; padding: 0 10px;
         .logo{margin: 5px 10px 0 0; float: left;
             img{height: 40px; width: auto;}
         }
@@ -117,17 +73,19 @@
             } 
         }
         .nav-icon{float: right; line-height:@head-height; 
-          .el-dropdown-link{display: block; padding: 0 10px;color: #fff; cursor: pointer;
+          .el-dropdown-link{display: block; width:@head-height; text-align: center; color: #fff; cursor: pointer;
               &:hover{background-color:darken(@common-color,10%);}
           }
-          
         }
-
+        &-elDropdown{ vertical-align: top;}
+        &-el-dropdown__menu{padding:0;
+            .link-item{color:#333; font-size: 12px; text-decoration: none;}
+        }
     }
    
 
-  .link-item{color:#333; font-size: 12px; text-decoration: none;}
-  .el-dropdown__menu{padding:0;}
+  
+  
 </style>
 
 
