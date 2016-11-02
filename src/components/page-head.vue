@@ -46,7 +46,7 @@
 
 <style lang="less">
     @head-height: 50px;
-    @common-color: #198789;
+    @common-color: #324057;
     .page-header{ background-color:@common-color; height: @head-height; padding: 0 10px;
         .logo{margin: 5px 10px 0 0; float: left;
             img{height: 40px; width: auto;}
